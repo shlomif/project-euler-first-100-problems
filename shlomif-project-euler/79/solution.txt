@@ -1,0 +1,32 @@
+0 always comes last, so it can safely be the last digit.
+
+So the number is XXXXXXXXXXXXXXX0.
+
+9 always comes last or before 0 so it can be the second-to-last digit. So
+the number is:
+
+So the number is XXXXXXXXXXXXX90
+
+Likewise for 8:
+
+XXXXXXXXXXXXXX890
+
+Likewise for 2:
+
+XXXXXXXXXXXX2890
+
+Repeat for 6:
+
+XXXXXXXXXX62890
+
+Repeat for 1:
+
+XXXXXXXXX162890
+
+Repeat for 3:
+
+XXXXXXXX3162890
+
+Only remaining one is 7:
+
+73162890

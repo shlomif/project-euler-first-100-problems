@@ -1,0 +1,7 @@
+If C >= B >= A, prove that A^2 + (B+C)^2 > B^2 + (C+A)^2 and that
+A^2 + (C+B)^2 > C^2 + (B+A)^2 .
+
+C^2 + (B+A)^2 = C^2 + B^2 + A^2 + 2BA, so the maximum is when BA is maximal,
+so we need to pick up B and C. Likewise, the minimum is when we take C in
+separate from A and B.
+
