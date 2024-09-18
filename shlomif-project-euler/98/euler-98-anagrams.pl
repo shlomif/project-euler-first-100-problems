@@ -6,7 +6,7 @@ use warnings;
 use IO::All;
 
 use Math::BigInt lib => 'GMP';
-use List::Util qw(first max);
+use List::Util      qw(first max);
 use List::MoreUtils qw(all any uniq notall);
 
 require 5.010;
@@ -72,10 +72,10 @@ foreach my $n ( 0 .. 999 )
 my @first_three_digits_list =
 
     (
-    map      { [ reverse split //, $_ ] }
-        grep { !/(\d).*\1/ }
-        map  { sprintf( "%03d", $_ ) }
-        sort { $a <=> $b }
+    map  { [ reverse split //, $_ ] }
+    grep { !/(\d).*\1/ }
+    map  { sprintf( "%03d", $_ ) }
+    sort { $a <=> $b }
         keys( %{ $which_squares_end_with_map{3} } )
     );
 
@@ -159,8 +159,8 @@ foreach my $list ( grep { ( @{$_} >= 2 ) && ( length( $_->[0] ) >= 3 ) }
             $iterate = sub {
                 my $map = shift;
 
-                my $next_n = first { !exists( $map->{$_} ) }
-                ( 0 .. $next_index - 1 );
+                my $next_n =
+                    first { !exists( $map->{$_} ) } ( 0 .. $next_index - 1 );
 
                 if ( defined($next_n) )
                 {

@@ -80,10 +80,9 @@ for my $i ( 1 .. 10_000 )
             if (
                 all
                 {
-                    ( !vec( $primes_bitmask, $new_p . $_, 1 ) )
+                           ( !vec( $primes_bitmask, $new_p . $_, 1 ) )
                         && ( !vec( $primes_bitmask, $_ . $new_p, 1 ) )
-                }
-                @p
+                } @p
                 )
             {
                 push @p, $new_p;
@@ -95,7 +94,7 @@ for my $i ( 1 .. 10_000 )
     if ( keys(%$objective) )
     {
         print map { "$_ => $objective->{$_}\n" }
-            sort  { $objective->{$a} <=> $objective->{$b} }
+            sort { $objective->{$a} <=> $objective->{$b} }
             keys(%$objective);
     }
 

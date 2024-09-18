@@ -12,6 +12,7 @@
 
 import re
 
-s = open('euler-13-description.txt', 'r').read()
+with open('euler-13-description.txt', 'r') as f:
+    s = f.read()
 nums = [int(n) for n in re.findall('[0-9]{50}', s)]
 print(str(sum(nums))[:10])

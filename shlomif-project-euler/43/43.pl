@@ -92,8 +92,15 @@ my $set = [ reverse( 0 .. 9 ) ];
 
 my $iter = Permutations::Iterator->new($set);
 
-my @primes =
-    ( [ 2, 2 ], [ 3, 3 ], [ 4, 5 ], [ 5, 7 ], [ 6, 11 ], [ 7, 13 ], [ 8, 17 ] );
+my @primes = (
+    [ 2, 2 ],
+    [ 3, 3 ],
+    [ 4, 5 ],
+    [ 5, 7 ],
+    [ 6, 11 ],
+    [ 7, 13 ],
+    [ 8, 17 ]
+);
 foreach (@primes)
 {
     $_->[0]--;

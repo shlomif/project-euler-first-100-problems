@@ -32,7 +32,7 @@ my @digits = ( $number =~ /[0-9]/g );
 print max (
     map {
         reduce { $a * $b }
-        @digits[ $_ .. ( $_ + 12 ) ]
+            @digits[ $_ .. ( $_ + 12 ) ]
     } ( 0 .. @digits - 13 )
 );
 print "\n";

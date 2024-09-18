@@ -34,7 +34,7 @@ while (1)
     if ( $count10 < $total )
     {
         print "Len = ", $len + 1, "\n";
-        print "N = ", $n, "\n";
+        print "N = ",   $n,       "\n";
         exit;
     }
 }

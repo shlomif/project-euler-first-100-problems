@@ -68,10 +68,9 @@ sub recurse
         if (
             all
             {
-                ( !vec( $primes_bitmask, $new_p . $_, 1 ) )
+                       ( !vec( $primes_bitmask, $new_p . $_, 1 ) )
                     && ( !vec( $primes_bitmask, $_ . $new_p, 1 ) )
-            }
-            @p
+            } @p
             )
         {
             recurse( [ $idx, @$indexes ] );

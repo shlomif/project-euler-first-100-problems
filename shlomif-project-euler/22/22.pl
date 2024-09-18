@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use IO::All qw(io);
+use IO::All    qw(io);
 use List::Util qw(sum);
 
 my $text = io("names.txt")->slurp();

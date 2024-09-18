@@ -6,7 +6,7 @@ use strict;
 use warnings;
 use 5.014;
 use autodie;
-use Math::Pari qw/ isprime /;
+use Math::Pari       qw/ isprime /;
 use Algorithm::Loops qw/ NextPermuteNum /;
 my @a = reverse( 1 .. 7 );
 my @b = ( 0 .. 6 );

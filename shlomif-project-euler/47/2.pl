@@ -28,7 +28,9 @@ sub num_distinct_factors
 
 my @primes;
 my $__primes_fh;
-open $__primes_fh, "primes 2|";
+## no critic
+open $__primes_fh, "primesieve 2|";
+## use critic
 my $primes_buf = "";
 
 sub inc_prime
@@ -63,10 +65,8 @@ for my $s ( 3 .. 1_000_000_000 )
 
                 for my $check ( $n - 3 .. $n )
                 {
-                    if (
-                        all { num_distinct_factors( $_, 2 ) == 4 }
-                        ( $check .. $check + 3 )
-                        )
+                    if ( all { num_distinct_factors( $_, 2 ) == 4 }
+                        ( $check .. $check + 3 ) )
                     {
                         print "Found $check\n";
                     }

@@ -11,12 +11,6 @@ class Integer
         denom_in_root = self
         denom_out_of_root = -root
 
-        make_state = lambda {
-            return { 'r' => root, 'numer' => numer, 'di' => denom_in_root,
-                'do' => denom_out_root,
-            }
-        }
-
         state_as_string = lambda {
             return \
             "r=#{root};n=#{numer};di=#{denom_in_root};do=#{denom_out_of_root}"

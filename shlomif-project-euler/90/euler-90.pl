@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use List::Util qw/ sum /;
+use List::Util      qw/ sum /;
 use List::MoreUtils ();
 
 my $max_digit = 9;

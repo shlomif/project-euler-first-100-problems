@@ -29,10 +29,7 @@ sub num_distinct_factors
 for my $check ( 110_000 .. 315720 )
 {
     print "Checking $check\n" if ( $check % 1_000 == 0 );
-    if (
-        all { num_distinct_factors( $_, 2 ) == 4 }
-        ( $check .. $check + 3 )
-        )
+    if ( all { num_distinct_factors( $_, 2 ) == 4 } ( $check .. $check + 3 ) )
     {
         print "Found $check\n";
         exit(0);

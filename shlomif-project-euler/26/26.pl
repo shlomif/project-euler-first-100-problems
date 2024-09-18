@@ -23,7 +23,7 @@ sub find_cycle
 
 my $pair =
     reduce { $a->[1] > $b->[1] ? $a : $b }
-map { [ $_, find_cycle($_) ] } ( 2 .. 999 );
+    map { [ $_, find_cycle($_) ] } ( 2 .. 999 );
 
 print join( ",", @$pair ), "\n";
 

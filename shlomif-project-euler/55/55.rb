@@ -26,4 +26,5 @@ class Integer
     end
 end
 
-puts ((1..10000).count { |n| n.lycherel? })
+below_ten_thousand_top = 9999
+puts ((1 .. below_ten_thousand_top).count { |n| n.lycherel? })
